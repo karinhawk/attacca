@@ -23,7 +23,7 @@ export const AuthProvider = (props) => {
         setUser(null);
     }
 
-    const value = {user, error, loginWithGoogle, logout}
+    const value = {user, error, loginWithGoogle, logout, setUser}
 
     return <authContext.Provider value={value} {...props}/>
 }

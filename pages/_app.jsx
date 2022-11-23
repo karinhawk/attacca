@@ -1,11 +1,14 @@
-import {AuthProvider} from "../config/hooks/auth.js"
+import { AuthProvider } from "../config/hooks/auth.js"
+import AuthStateChanged from "../layout/AuthStateChanged.js"
 import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
   return (
     <AuthProvider>
-  <Component {...pageProps} />
-  </AuthProvider>
+      <AuthStateChanged>
+        <Component {...pageProps} />
+      </AuthStateChanged>
+    </AuthProvider>
   )
 }
 

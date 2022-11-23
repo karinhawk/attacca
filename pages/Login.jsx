@@ -1,8 +1,8 @@
-import {useAuth} from "../config/hooks/auth.js";
+import { withPublic } from "../config/hooks/route.js";
 
 
-const Login = () => {
-    const { user, error, loginWithGoogle } = useAuth()
+const Login = ({auth}) => {
+    const { user, error, loginWithGoogle } = auth;
   return (
     <div>
         {error && <h1>{error}</h1>}
@@ -12,4 +12,4 @@ const Login = () => {
   )
 }
 
-export default Login
+export default withPublic(Login);

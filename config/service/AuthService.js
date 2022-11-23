@@ -12,7 +12,7 @@ export const AuthService = {
         try {
             const userCredentials = await signInWithPopup(auth, provider);
             return {
-                user: userCredentials,
+                user: userCredentials.user,
             }
         } catch (e) {
             return {
@@ -22,6 +22,6 @@ export const AuthService = {
     },
     logout: async() => {
         const auth = getAuth();
-        await firebase.signOut(auth)
+        await signOut(auth);
     }
 }
