@@ -1,12 +1,15 @@
+import Layout from "../Components/Layout.jsx"
 import { AuthProvider } from "../config/hooks/auth.js"
 import AuthStateChanged from "../layout/AuthStateChanged.js"
-import '../styles/globals.css'
+import '../styles/globals.scss'
 
 function MyApp({ Component, pageProps }) {
   return (
     <AuthProvider>
       <AuthStateChanged>
+        <Layout>
         <Component {...pageProps} />
+        </Layout>
       </AuthStateChanged>
     </AuthProvider>
   )
