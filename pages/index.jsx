@@ -6,6 +6,9 @@ import { withPublic } from "../config/hooks/route.js";
 
 function Home({auth}) {
   const { loginWithGoogle } = auth;
+
+
+
   return (
     <div className={styles.container}>
       <Head>

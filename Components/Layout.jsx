@@ -1,3 +1,4 @@
+import { withProtected } from '../config/hooks/route'
 import Footer from './Footer'
 import Navbar from './Navbar'
 

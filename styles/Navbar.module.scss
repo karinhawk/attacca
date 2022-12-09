@@ -1,0 +1,17 @@
+.nav {
+    height: 5vh;
+    width: 100vw;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    &__items {
+        width: 80vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__item {
+        font-size: 1.4rem;
+    }
+  }
+  

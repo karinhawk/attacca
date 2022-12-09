@@ -1,8 +1,10 @@
-import React from 'react'
+import styles from "../styles/Footer.module.scss"
 
 const Footer = () => {
   return (
-    <div>Footer</div>
+    <div>
+      <p>Copyright Karin Hawksworth 2022</p>
+    </div>
   )
 }
 
